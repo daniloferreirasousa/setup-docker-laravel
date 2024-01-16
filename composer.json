@@ -1,5 +1,5 @@
 {
-    "name": "daniloferreirasousa/laravel-10.x",
+    "name": "daniloferreirasousa/laravel-docker",
     "type": "project",
     "description": "Ambiente Docker/Laravel base para o desenvolvimento de Sistemas Web",
     "authors": [
@@ -72,5 +72,6 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "version": "1.0.0"
 }
