@@ -1,54 +1,50 @@
-## Setup Docker Laravel
+# Laravel Docker
 
-### Passo a passo
+### Configuração
 
-Faça o download da versão mais recente publicada nas Tag's
+1. Crie o seu projeto Laravel Docker em uma pasta de sua preferência:
+>```sh
+>$ composer create-project --prefer-dist daniloferreirasousa/laravel-docker seu_diretorio
+>```
 
-Clone Repositório para dentro do seu Projeto Laravel criado recentemente
+2. Crie uma cópia do arquivo .env.example para .env:
+>```sh
+>$ cp .env.example .env
+>```
+
+3. Atualize as variáveis de ambiente no arquivo .env:
 ```sh
-git clone https://github.com/daniloferreirasousa/setup-docker-laravel.git ./
-```
-
-Crie o Arquivo .env
-```sh
-cp .env.example .env
-```
-
-Atualize as variáveis de ambiente do arquivo .env
-```dosini
 APP_NAME="Nome do seu Projeto"
 APP_URL=http://localhost:8001
 APP_USER=user  // não usar espaços em branco
 APP_UID=1000  // recomendado
 ```
 
-Crie a imagem do seu Container
-```sh
-docker-compose build --no-cache
-```
+4. Faça a criação do ambiente Docker:
+>```sh
+>$ docker-compose build --no-cache
+>```
 
-Suba os containers do projeto
-```sh
-docker-compose up -d
-```
-
-
-Acessar o container
-```sh
-docker-compose exec -it app bash
-```
+5. Inicie o container do seu Projeto:
+>```sh
+>$ docker-compose up -d
+>```
 
 
-Instalar as dependências do projeto
-```sh
-composer install
-```
-
-Atualizar as dependências caso hajam atualizações
-```sh
-composer update
-```
+6. Acessar o container app do seu ambiente criado:
+>```sh
+>$ docker-compose exec -it app bash
+>```
 
 
-Acesse o projeto
-[http://localhost:8989](http://localhost:8002)
+7. Atualizar e instalar as dependências do projeto dentro do container app:
+>```sh
+>$ composer update
+>```
+
+8. Crie a key para o seu projeto Laravel:
+>```sh
+>$ php artisan key:generate
+>```
+
+Pronto após finalizar todos os passos listados acima, seu projeto deve estar pronto para ser acessado em: [http://localhost:8002](http://localhost:8002)
