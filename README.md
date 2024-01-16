@@ -4,7 +4,7 @@
 
 1. Crie o seu projeto Laravel Docker em uma pasta de sua preferência:
 >```sh
->$ composer create-project --prefer-dist daniloferreirasousa/laravel-docker seu_diretorio
+>$ composer create-project --prefer-dist daniloasf/laravel-docker seu_diretorio
 >```
 
 2. Crie uma cópia do arquivo .env.example para .env:

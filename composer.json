@@ -1,5 +1,5 @@
 {
-    "name": "daniloferreirasousa/laravel-docker",
+    "name": "daniloasf/laravel-docker",
     "type": "project",
     "description": "Ambiente Docker/Laravel base para o desenvolvimento de Sistemas Web",
     "authors": [
